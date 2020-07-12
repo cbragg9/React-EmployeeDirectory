@@ -1,0 +1,9 @@
+.header-box {
+  background-color: #111d42;
+  border-bottom: red 3px solid;
+}
+
+h1, h6 {
+  color: white;
+  margin: 1rem;
+}
