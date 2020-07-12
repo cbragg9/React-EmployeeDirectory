@@ -10,15 +10,15 @@ class App extends React.Component {
     results: {}
   };
 
-  componentDidMount = async () => {
-    await API.search()
+  componentDidMount = () => {
+    API.search()
       .then(res => {
         this.setState({
           results: res.data.results
         });
       })
       .catch(err => console.log(err));
-      // this.state.results.forEach(employee => console.log(employee.name.first));
+      // this.state.results.forEach(employee => console.log(employee));
   }
 
   handleInputChange = event => {
@@ -32,7 +32,7 @@ class App extends React.Component {
       <div className="text-center">
         <Header />
         <Form handleInputChange={this.handleInputChange} currentState={this.state} />
-        <Table />
+        <Table results={this.state.results}/>
       </div>
     )
   }

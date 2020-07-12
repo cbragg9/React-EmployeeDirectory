@@ -1,7 +1,8 @@
 import React from "react";
+import TableRow from "./TableRow.js";
 
-function Table() {
-
+function Table(props) {
+  const results = props.results;
   return (
     <div className="container-fluid">
       <div className="row d-flex justify-content-center">
@@ -17,27 +18,18 @@ function Table() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">Image</th>
-                <td>Martha Wilson</td>
-                <td>Phone</td>
-                <td>Email</td>
-                <td>DOB</td>
-              </tr>
-              <tr>
-                <th scope="row">Image</th>
-                <td>Dennis Bailey</td>
-                <td>Phone</td>
-                <td>Email</td>
-                <td>DOB</td>
-              </tr>
-              <tr>
-                <th scope="row">Image</th>
-                <td>Mae Weaver</td>
-                <td>Phone</td>
-                <td>Email</td>
-                <td>DOB</td>
-              </tr>
+              {results.length ? (
+                results.map(employee => (
+                  <TableRow 
+                    image={employee.picture.thumbnail}
+                    name={employee.name.first + " " + employee.name.last}
+                    phone={employee.phone}
+                    email={employee.email}
+                    DOB={employee.dob.date}
+                    key={employee.login.uuid}
+                  />
+                )) 
+              ) : <TableRow />}
             </tbody>
           </table>
         </div>
