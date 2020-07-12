@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "./components/Form.js";
 import Header from "./components/Header.js";
+import Table from "./components/Table.js";
 
 class App extends React.Component {
   state = {
@@ -18,6 +19,7 @@ class App extends React.Component {
       <div className="text-center">
         <Header />
         <Form handleInputChange={this.handleInputChange} currentState={this.state}/>
+        <Table />
       </div>
     )
   }
