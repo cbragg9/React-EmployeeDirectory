@@ -1,5 +1,6 @@
 import React from "react";
 import TableRow from "./TableRow.js";
+import "../styles/Table.css";
 
 function Table(props) {
   const results = props.results;
@@ -11,10 +12,10 @@ function Table(props) {
             <thead>
               <tr>
                 <th scope="col">Image</th>
-                <th scope="col">Name</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Email</th>
-                <th scope="col">DOB</th>
+                <th scope="col" className="sortBy" onClick={props.handleSort} data-header="name">Name</th>
+                <th scope="col" className="sortBy" onClick={props.handleSort} data-header="phone">Phone</th>
+                <th scope="col" className="sortBy" onClick={props.handleSort} data-header="email">Email</th>
+                <th scope="col" className="sortBy" onClick={props.handleSort} data-header="dob">DOB</th>
               </tr>
             </thead>
             <tbody>
@@ -29,7 +30,7 @@ function Table(props) {
                     key={employee.login.uuid}
                   />
                 )) 
-              ) : <TableRow />}
+              ) : <tr />}
             </tbody>
           </table>
         </div>
