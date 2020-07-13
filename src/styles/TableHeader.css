@@ -1,3 +1,7 @@
 .sortBy {
   cursor: pointer;
 }
+
+.hidden {
+  display: none;
+}

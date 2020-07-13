@@ -46,7 +46,7 @@ class App extends React.Component {
 
   // Sort the filtered results based off the table header that is clicked
   handleSort = (event) => {
-    const sortByCategory = event.target.getAttribute("data-header");
+    const sortByCategory = event.target.getAttribute("id");
 
     // If already sorting by the chosen header/category, reverse the results
     if (this.state.sortedBy === sortByCategory) {
@@ -79,7 +79,7 @@ class App extends React.Component {
       <div className="text-center">
         <Header />
         <Form handleInputChange={this.handleInputChange} currentState={this.state} />
-        <Table results={this.state.filtered} handleSort={this.handleSort}/>
+        <Table results={this.state.filtered} handleSort={this.handleSort} sortedBy={this.state.sortedBy}/>
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import React from "react";
 import TableRow from "./TableRow.js";
-import "../styles/Table.css";
+import TableHeader from "./TableHeader.js";
 
 function Table(props) {
   const results = props.results;
@@ -10,13 +10,7 @@ function Table(props) {
         <div className="col-10">
           <table className="table table-striped">
             <thead>
-              <tr>
-                <th scope="col">Image</th>
-                <th scope="col" className="sortBy" onClick={props.handleSort} data-header="name">Name</th>
-                <th scope="col" className="sortBy" onClick={props.handleSort} data-header="phone">Phone</th>
-                <th scope="col" className="sortBy" onClick={props.handleSort} data-header="email">Email</th>
-                <th scope="col" className="sortBy" onClick={props.handleSort} data-header="dob">DOB</th>
-              </tr>
+              <TableHeader handleSort={props.handleSort} sortedBy={props.sortedBy}/>
             </thead>
             <tbody>
               {results.length ? (
