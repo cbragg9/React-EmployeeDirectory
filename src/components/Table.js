@@ -8,7 +8,7 @@ function Table(props) {
     <div className="container-fluid">
       <div className="row d-flex justify-content-center">
         <div className="col-10">
-          <table className="table table-striped">
+          <table className="table table-striped table-responsive-lg">
             <thead>
               <TableHeader handleSort={props.handleSort} sortedBy={props.sortedBy} />
             </thead>
