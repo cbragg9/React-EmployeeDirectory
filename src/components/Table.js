@@ -10,12 +10,12 @@ function Table(props) {
         <div className="col-10">
           <table className="table table-striped">
             <thead>
-              <TableHeader handleSort={props.handleSort} sortedBy={props.sortedBy}/>
+              <TableHeader handleSort={props.handleSort} sortedBy={props.sortedBy} />
             </thead>
             <tbody>
               {results.length ? (
                 results.map(employee => (
-                  <TableRow 
+                  <TableRow
                     image={employee.picture.thumbnail}
                     name={employee.name.first + " " + employee.name.last}
                     phone={employee.phone}
@@ -23,7 +23,7 @@ function Table(props) {
                     DOB={employee.dob.date}
                     key={employee.login.uuid}
                   />
-                )) 
+                ))
               ) : <tr />}
             </tbody>
           </table>
@@ -31,7 +31,6 @@ function Table(props) {
       </div>
     </div>
   )
-
 }
 
 export default Table;

@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/Header.css";
 
 function Header() {
-
   return (
     <div className="container-fluid">
       <div className="row d-flex justify-content-center header-box">
@@ -13,7 +12,6 @@ function Header() {
       </div>
     </div>
   )
-
 }
 
 export default Header;
