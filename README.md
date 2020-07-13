@@ -3,7 +3,7 @@ View, sort, and filter an API/Axios-generated employee list built using React co
 
 ## <a href="https://cbragg9.github.io/React-EmployeeDirectory/" target="_blank">Deployed: https://cbragg9.github.io/React-EmployeeDirectory/</a>
 
-![Demo](TBD)
+![Demo](https://media.giphy.com/media/h5L8qBkYKfXy9Iv3Cg/giphy.gif)
 
 ## Features
 
