@@ -1,7 +1,7 @@
 # React Employee Directory
 View, sort, and filter an API/Axios-generated employee list built using React components, state management, and user event handling.  
 
-## Deployed URL: https://cbragg9.github.io/React-EmployeeDirectory/
+## <a href="https://cbragg9.github.io/React-EmployeeDirectory/" target="_blank">Deployed: https://cbragg9.github.io/React-EmployeeDirectory/</a>
 
 ![Demo](TBD)
 

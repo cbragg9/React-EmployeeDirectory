@@ -5,3 +5,7 @@
 .hidden {
   display: none;
 }
+
+.sortBy:hover {
+  color: red;
+}
